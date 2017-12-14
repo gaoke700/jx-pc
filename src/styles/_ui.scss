@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+.ui-btn {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 0 -3px 0 0;
+  font-size: 18px;
+  line-height: 1;
+  color: $g-highlight;
+  text-align: center;
+  cursor: pointer;
+  background: white;
+  border: 1px solid $g-highlight;
+  -webkit-appearance: none;
+
+  &-color1 {
+    color: white;
+    background: $g-highlight;
+  }
+
+  &.disabled {
+    color: #e9ecef;
+    border-color: #e9ecef;
+  }
+}
+
+.ui-no-data {
+  padding: 45px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #888888;
+  background: #ffffff;
+  margin: 20px 0;
+  img {
+    width: 160px;
+    display: block;
+    margin: 0 auto 40px;
+  }
+  .ui-no-data-text {
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 0;
+    margin: 30px 0 20px;
+  }
+  .ui-no-data-target {
+    font-size: 14px;
+    color: #006de7;
+    letter-spacing: 0;
+    a {
+      text-decoration: underline;
+      text-decoration-color: #006de7;
+    }
+  }
+}

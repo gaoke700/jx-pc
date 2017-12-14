@@ -1,0 +1,118 @@
+// radio
+@import "variables";
+
+$primary-color: $g-highlight;
+
+.radio-group-split {
+  .el-radio-button {
+    .el-radio-button__inner {
+      margin-right: 10px;
+      border-left: 1px solid #e3e3e3;
+    }
+
+    .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+      border-left: 1px solid $primary-color;
+      box-shadow: none;
+    }
+  }
+
+  &.tick {
+    .el-radio-button {
+      .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          content: '';
+          background: url("~assets/images/detail/tick.png") no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+// button
+.el-button {
+  &.selected,
+  &:hover,
+  &:focus {
+    &.tick {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        content: '';
+        background: url("~assets/images/detail/tick.png") no-repeat center;
+      }
+    }
+  }
+
+  &.selected {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+// dialog
+.el-dialog__header,
+.el-message-box__header {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 20px 0;
+  border-bottom: 1px solid #e6e7ed;
+}
+
+.el-dialog__body,
+.el-message-box__content {
+  color: #13151a;
+}
+
+.el-dialog__footer,
+.el-message-box__btns {
+  text-align: center;
+
+  .el-button {
+    padding: 7px 20px;
+    border-radius: 4px;
+  }
+}
+
+// message-box
+.el-message-box__header {
+  .el-message-box__title {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .el-message-box__headerbtn {
+    top: 10px;
+    right: 10px;
+
+    &:hover .el-message-box__close {
+      color: $g-highlight;
+    }
+
+    .el-message-box__close {
+      color: #e3e3e3;
+      font-size: 12px;
+    }
+  }
+}
+
+.el-message-box__content {
+  .el-message-box__message {
+    text-align: center;
+  }
+}
+
+.el-message-box__btns {
+  font-size: 12px;
+}

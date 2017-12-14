@@ -1,0 +1,35 @@
+@import "variables";
+.ui-button {
+  display: inline-block;
+  width: 150px;
+  height: 100%;
+  padding: 5px;
+  color: #aaaaaa;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #aaaaaa;
+
+  &:hover,
+  &.active,
+  &.tick {
+    color: $g-highlight;
+    border-color: $g-highlight;
+  }
+
+  &.tick {
+    position: relative;
+  }
+
+  &.tick {
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      content: '';
+      background: url("~assets/images/detail/tick.png") no-repeat center;
+    }
+  }
+}

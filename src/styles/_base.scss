@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+body {
+  min-width: $page-width;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333333;
+  background-color: white;
+}
+
+//*,
+//*::before,
+//*::after {
+//  box-sizing: inherit;
+//}

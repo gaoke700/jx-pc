@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src=./static/js/config.js></script>
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_381164_ci1qcvasf25u3di.css">
+    <%= htmlWebpackPlugin.files.webpackManifest %>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <% if (htmlWebpackPlugin.options.frontMode === '360buy') { %>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://account.shopex.cn/pic/analytics.js','ga');
+
+        ga('create', 'UA-75765477-2', 'auto');
+        ga('send', 'pageview');
+      </script>
+    <% } %>
+  </body>
+</html>

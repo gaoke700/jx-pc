@@ -1,0 +1,76 @@
+@import "variables";
+
+.ui-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-timeline-item {
+  position: relative;
+  padding: 0 0 12px;
+  list-style: none;
+  margin: 0;
+}
+
+.ui-timeline-item-tail {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border-left: 2px solid #e9e9e9;
+}
+
+.ui-timeline-item-pending .ui-timeline-item-tail {
+  display: none;
+}
+
+.ui-timeline-item-head {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+}
+
+.ui-timeline-item-head-red {
+  background: $g-highlight;
+}
+
+.ui-timeline-item-head-gray {
+  background: #dddddd;
+}
+
+.ui-timeline-item-head-custom {
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  left: -14px;
+  line-height: 1;
+  margin-top: 6px;
+  border: 0;
+  height: auto;
+  border-radius: 0;
+  padding: 3px 0;
+  font-size: 12px;
+  transform: translateY(-50%);
+}
+
+.ui-timeline-item-content {
+  padding: 0 0 10px 24px;
+  font-size: 12px;
+  position: relative;
+  top: -3px;
+}
+
+.ui-timeline-item-last .ui-timeline-item-tail {
+  border-left: 2px dotted #e9e9e9;
+  display: none;
+}
+
+.ui-timeline-item-last .ui-timeline-item-content {
+  min-height: 48px;
+}
+
+.ui-timeline.ui-timeline-pending .ui-timeline-item-last .ui-timeline-item-tail {
+  display: block;
+}
